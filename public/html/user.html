@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Foodify User Page</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="../styles/userstyle.css">
+
+</head>
+
+<body>
+    <!-- container for the entire page -->
+    <div class="full-screen-container">
+
+        <!-- (Top-to-Bottom) left side user page container (holding main table items) -->
+        <div class="container-left">
+            <div class="logo-holder">
+                <div class="logo"></div>
+            </div>
+
+            <!-- Category holder for the -->
+            <div class="category-holder">
+
+                <div class="cat-drop">
+                    <button onclick="catFunction()" class="dropclick">Protein<button>
+                            <div id="catDropdown" class="category-dropdown">
+                                <a href="">Chicken</a>
+                                <a href="">Pork</a>
+                                <a href="">Fish</a>
+                                <a href="">Beef</a>
+                            </div>
+                </div>
+
+                <div class="cat-drop">
+                    <button onclick="catFunction()" class="dropclick">Vegetable<button>
+                            <div id="catDropdown" class="category-dropdown">
+                                <a href="">Broccoli</a>
+                                <a href="">Green Beans</a>
+                                <a href="">Lettuce</a>
+                                <a href="">Tomato</a>
+                            </div>
+                </div>
+
+                <div class="cat-drop">
+                    <button onclick="catFunction()" class="dropclick">Carbohydrate<button>
+                            <div id="catDropdown" class="category-dropdown">
+                                <a href="">Rice</a>
+                                <a href="">Bread</a>
+                                <a href="">Oatmeal</a>
+                                <a href="">Pasta</a>
+                            </div>
+                </div>
+
+                <div class="cat-drop">
+                    <button onclick="catFunction()" class="dropclick">Dairy<button>
+                            <div id="catDropdown" class="category-dropdown">
+                                <a href="">Milk</a>
+                                <a href="">Cheese</a>
+                                <a href="">Sour Cream</a>
+                                <a href="">Cream</a>
+                            </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- (Top-to-Bottom) right side user page container -->
+        <div class="container-right">
+
+            <!-- Welcome Banner holder -->
+            <div class="jumbo-container">
+                <div class="jumbotron-welcome">
+                    <h1 class="banner"><strong>Welcome</strong></h1>
+                </div>
+
+                <!-- current inventory button -->
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Current Inventory</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="">Chicken</a>
+                        <a href="">Broccoli</a>
+                        <a href="">French Bread</a>
+                        <a href="">Milk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- container that will hold the items returned when passed thorugh Recipe API -->
+            <div class="return-container">
+                <div class="return-object">
+                    <div class="object">
+                        <p class="ret-label">Returned</p>
+                    </div>
+                    <div class="object">
+                        <p class="ret-label">Returned</p>
+                    </div>
+                    <div class="object">
+                        <p class="ret-label">Returned</p>
+                    </div>
+                    <div class="object">
+                        <p class="ret-label">Returned</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="../js/user.js"></script>
+
+
+</body>
+
+</html>
