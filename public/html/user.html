@@ -10,8 +10,9 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+        <link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../styles/userstyle.css">
+    
 
 </head>
 
@@ -22,52 +23,53 @@
         <!-- (Top-to-Bottom) left side user page container (holding main table items) -->
         <div class="container-left">
             <div class="logo-holder">
-                <div class="logo"></div>
+                <img class="logo-background" src="../photos/carrots-2106825_1280.jpg" alt="Logo Background">
+                <img class="logo-foreground" src="../photos/logo.png" alt="Logo Foreground">
             </div>
 
             <!-- Category holder for the -->
             <div class="category-holder">
 
                 <div class="cat-drop">
-                    <button onclick="catFunction()" class="dropclick">Protein<button>
-                            <div id="catDropdown" class="category-dropdown">
-                                <a href="">Chicken</a>
-                                <a href="">Pork</a>
-                                <a href="">Fish</a>
-                                <a href="">Beef</a>
+                    <button onclick="catFunctionProtein()" class="drop-click">Protein
+                            <div id="proteinDropdown" class="category-dropdown">
+                                <button id="chicken">Chicken</button>
+                                <button id="pork">Pork</button>
+                                <button id="fish">Fish</button>
+                                <button id="beef">Beef</button>
+                            </div>
+                </div>
+
+                <!-- <div class="cat-drop">
+                    <button onclick="catFunctionVeggie()" class="drop-click">Vegetable
+                            <div id="veggiesDropdown" class="category-dropdown">
+                                <a id="broccoli">Broccoli</a>
+                                <a id="gbean">Green Beans</a>
+                                <a id="lettuce">Lettuce</a>
+                                <a id="tomato">Tomato</a>
                             </div>
                 </div>
 
                 <div class="cat-drop">
-                    <button onclick="catFunction()" class="dropclick">Vegetable<button>
-                            <div id="catDropdown" class="category-dropdown">
-                                <a href="">Broccoli</a>
-                                <a href="">Green Beans</a>
-                                <a href="">Lettuce</a>
-                                <a href="">Tomato</a>
+                    <button onclick="catFunctionCarb()" class="drop-click">Carbohydrate
+                            <div id="carbDropdown" class="category-dropdown">
+                                <a id="rice">Rice</a>
+                                <a id="bread">Bread</a>
+                                <a id="oatmeal">Oatmeal</a>
+                                <a id="pasta">Pasta</a>
                             </div>
                 </div>
 
                 <div class="cat-drop">
-                    <button onclick="catFunction()" class="dropclick">Carbohydrate<button>
-                            <div id="catDropdown" class="category-dropdown">
-                                <a href="">Rice</a>
-                                <a href="">Bread</a>
-                                <a href="">Oatmeal</a>
-                                <a href="">Pasta</a>
+                    <button onclick="catFunctionDairy()" class="drop-click">Dairy
+                            <div id="dairyDropdown" class="category-dropdown">
+                                <a id="milk" >Milk</a>
+                                <a id="cheese" >Cheese</a>
+                                <a id="scream" >Sour Cream</a>
+                                <a id="cream" >Cream</a>
                             </div>
-                </div>
-
-                <div class="cat-drop">
-                    <button onclick="catFunction()" class="dropclick">Dairy<button>
-                            <div id="catDropdown" class="category-dropdown">
-                                <a href="">Milk</a>
-                                <a href="">Cheese</a>
-                                <a href="">Sour Cream</a>
-                                <a href="">Cream</a>
-                            </div>
-                </div>
-
+                </div> -->
+                
             </div>
         </div>
 
@@ -77,17 +79,21 @@
             <!-- Welcome Banner holder -->
             <div class="jumbo-container">
                 <div class="jumbotron-welcome">
-                    <h1 class="banner"><strong>Welcome</strong></h1>
+                    <h1 class="banner"><strong>"Welcome to Foodify...!"</strong></h1>
+                    <a href=""><button>log out</button></a>
                 </div>
+
+                
+
 
                 <!-- current inventory button -->
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Current Inventory</button>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="">Chicken</a>
-                        <a href="">Broccoli</a>
-                        <a href="">French Bread</a>
-                        <a href="">Milk</a>
+                        <p>Chicken</p>
+                        <p>Broccoli</p>
+                        <p>French Bread</p>
+                        <p>Milk</p>
                     </div>
                 </div>
             </div>
@@ -108,15 +114,16 @@
                         <p class="ret-label">Returned</p>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
-
     </div>
 
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/user.js"></script>
+
 
 
 </body>
