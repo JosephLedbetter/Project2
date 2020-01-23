@@ -7,7 +7,7 @@
  */
 
 .background-image{
-  background-image: url(../photos/med-food-hero_1.jpg);;
+  background-image: url(../photos);;
 
 } 
 .header{
@@ -75,7 +75,10 @@ p {
   .parallax-container .section {
     width: 100%;
   }
-
+/* Sing up  */
+.btn-align{
+  margin-left: 500px ;
+}
 
 
   /* Social media buttons */
@@ -136,6 +139,10 @@ p {
     color: white;
   }
 
+
+  /* .page-footer{
+    margin-top: 300px;
+  } */
 
 
   
