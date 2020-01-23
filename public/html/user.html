@@ -10,9 +10,9 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../styles/userstyle.css">
-    
+
 
 </head>
 
@@ -31,62 +31,79 @@
             <div class="category-holder">
 
                 <div class="cat-drop">
-                    <button onclick="catFunctionProtein()" class="drop-click">Protein
-                            <div id="proteinDropdown" class="category-dropdown">
-                                <button id="chicken">Chicken</button>
-                                <button id="pork">Pork</button>
-                                <button id="fish">Fish</button>
-                                <button id="beef">Beef</button>
-                            </div>
+                    <button onclick="catFunctionProtein()" class="drop-click">Protein</button>
+                        <div id="proteinDropdown" class="category-dropdown">
+                            <button id="chicken">Chicken</button>
+                            <button id="pork">Pork</button>
+                            <button id="fish">Fish</button>
+                            <button id="beef">Beef</button>
+                        
+                        </div>
                 </div>
-
-                <!-- <div class="cat-drop">
-                    <button onclick="catFunctionVeggie()" class="drop-click">Vegetable
-                            <div id="veggiesDropdown" class="category-dropdown">
-                                <a id="broccoli">Broccoli</a>
-                                <a id="gbean">Green Beans</a>
-                                <a id="lettuce">Lettuce</a>
-                                <a id="tomato">Tomato</a>
-                            </div>
-                </div>
-
-                <div class="cat-drop">
-                    <button onclick="catFunctionCarb()" class="drop-click">Carbohydrate
-                            <div id="carbDropdown" class="category-dropdown">
-                                <a id="rice">Rice</a>
-                                <a id="bread">Bread</a>
-                                <a id="oatmeal">Oatmeal</a>
-                                <a id="pasta">Pasta</a>
-                            </div>
-                </div>
-
-                <div class="cat-drop">
-                    <button onclick="catFunctionDairy()" class="drop-click">Dairy
-                            <div id="dairyDropdown" class="category-dropdown">
-                                <a id="milk" >Milk</a>
-                                <a id="cheese" >Cheese</a>
-                                <a id="scream" >Sour Cream</a>
-                                <a id="cream" >Cream</a>
-                            </div>
-                </div> -->
+                <br>
                 
+
+        <!-- input section to enter a new category and food item to the list above -->
+                
+
+                <div class="cat-drop">
+                    <button onclick="catFunctionVeggie()" class="drop-click">Vegetable</button>
+                            <div id="veggiesDropdown" class="category-dropdown">
+                                <button id="broccoli">Broccoli</button>
+                                <button id="gbean">Green Beans</button>
+                                <button id="lettuce">Lettuce</button>
+                                <button id="tomato">Tomato</button>
+                            </div>
+                </div>
+
+                <div class="cat-drop">
+                    <button onclick="catFunctionCarb()" class="drop-click">Carbohydrate</button>
+                            <div id="carbDropdown" class="category-dropdown">
+                                <button id="rice">Rice</button>
+                                <button id="bread">Bread</button>
+                                <button id="oatmeal">Oatmeal</button>
+                                <button id="pasta">Pasta</button>
+                            </div>
+                </div>
+
+                <div class="cat-drop">
+                    <button onclick="catFunctionDairy()" class="drop-click">Dairy</button>
+                            <div id="dairyDropdown" class="category-dropdown">
+                                <button id="milk" >Milk</button>
+                                <button id="cheese" >Cheese</button>
+                                <button id="scream" >Sour Cream</a>
+                                <button id="cream" >Cream</button>
+                            </div>
+                </div>
             </div>
+            <form class="new-item">
+                <div class="new-category form-group">
+                    <label for="exampleInputCategory">Category</label>
+                    <input type="text" class="form-control" id="exampleInputCategory" aria-describedby="categoryHelp">
+                </div>
+                <div class="new-ingredient form-group">
+                    <label for="exampleInputItem">Food Item</label>
+                    <input type="text" class="form-control" id="exampleInputItem">
+                </div>
+                <br>
+                <a href=""><button class="submit">Submit New Item</button></a>
+            </form>
         </div>
 
         <!-- (Top-to-Bottom) right side user page container -->
         <div class="container-right">
 
-            <!-- Welcome Banner holder -->
+        <!-- Welcome Banner holder -->
             <div class="jumbo-container">
                 <div class="jumbotron-welcome">
                     <h1 class="banner"><strong>"Welcome to Foodify...!"</strong></h1>
-                    <a href=""><button>log out</button></a>
+                    <a href=""><button class="logout">log out</button></a>
                 </div>
 
-                
 
 
-                <!-- current inventory button -->
+
+        <!-- current inventory button -->
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Current Inventory</button>
                     <div id="myDropdown" class="dropdown-content">
@@ -104,24 +121,13 @@
                     <div class="object">
                         <p class="ret-label">Returned</p>
                     </div>
-                    <div class="object">
-                        <p class="ret-label">Returned</p>
-                    </div>
-                    <div class="object">
-                        <p class="ret-label">Returned</p>
-                    </div>
-                    <div class="object">
-                        <p class="ret-label">Returned</p>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/user.js"></script>
 
 
