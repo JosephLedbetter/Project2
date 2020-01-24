@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../styles/userstyle.css">
 
@@ -33,10 +34,10 @@
                 <div class="cat-drop">
                     <button onclick="catFunctionProtein()" class="drop-click">Protein</button>
                         <div id="proteinDropdown" class="category-dropdown">
-                            <button id="chicken">Chicken</button>
-                            <button id="pork">Pork</button>
-                            <button id="fish">Fish</button>
-                            <button id="beef">Beef</button>
+                            <button id="chicken" class="food">Chicken</button>
+                            <button id="pork" class="food">Pork</button>
+                            <button id="fish class="food">Fish</button>
+                            <button id="beef" class="food">Beef</button>
                         
                         </div>
                 </div>
@@ -49,30 +50,30 @@
                 <div class="cat-drop">
                     <button onclick="catFunctionVeggie()" class="drop-click">Vegetable</button>
                             <div id="veggiesDropdown" class="category-dropdown">
-                                <button id="broccoli">Broccoli</button>
-                                <button id="gbean">Green Beans</button>
-                                <button id="lettuce">Lettuce</button>
-                                <button id="tomato">Tomato</button>
+                                <button id="broccoli" class="food">Broccoli</button>
+                                <button id="gbean" class="food">Green Beans</button>
+                                <button id="lettuce" class="food">Lettuce</button>
+                                <button id="tomato" class="food">Tomato</button>
                             </div>
                 </div>
 
                 <div class="cat-drop">
                     <button onclick="catFunctionCarb()" class="drop-click">Carbohydrate</button>
                             <div id="carbDropdown" class="category-dropdown">
-                                <button id="rice">Rice</button>
-                                <button id="bread">Bread</button>
-                                <button id="oatmeal">Oatmeal</button>
-                                <button id="pasta">Pasta</button>
+                                <button class="food" id="rice">Rice</button>
+                                <button class="food"id="bread">Bread</button>
+                                <button class="food"id="oatmeal">Oatmeal</button>
+                                <button class="food" id="pasta">Pasta</button>
                             </div>
                 </div>
 
                 <div class="cat-drop">
                     <button onclick="catFunctionDairy()" class="drop-click">Dairy</button>
                             <div id="dairyDropdown" class="category-dropdown">
-                                <button id="milk" >Milk</button>
-                                <button id="cheese" >Cheese</button>
-                                <button id="scream" >Sour Cream</a>
-                                <button id="cream" >Cream</button>
+                                <button id="milk" class="food">Milk</button>
+                                <button id="cheese" class="food">Cheese</button>
+                                <button id="sour cream" class="food">Sour Cream</a>
+                                <button id="cream" class="food" >Cream</button>
                             </div>
                 </div>
             </div>
@@ -107,10 +108,10 @@
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Current Inventory</button>
                     <div id="myDropdown" class="dropdown-content">
-                        <p>Chicken</p>
-                        <p>Broccoli</p>
-                        <p>French Bread</p>
-                        <p>Milk</p>
+                        <button id="chicken" class="ingredient">Chicken<i class="material-icons">add</i></button>
+                        <button id="broccoli"class="ingredient">Broccoli<i class="material-icons">add</i></button>
+                        <button id="french bread"class="ingredient">French Bread<i class="material-icons">add</i></button>
+                        <button id ="milk"class="ingredient"><i class="material-icons">add</i>Milk</button>
                     </div>
                 </div>
             </div>
@@ -119,7 +120,12 @@
             <div class="return-container">
                 <div class="return-object">
                     <div class="object">
+                        <div>
                         <p class="ret-label">Returned</p>
+                    </div>
+                    <div class="preference"">
+                        <i id="add-favorite" class="material-icons">add</i>
+                        <i id="delete-favorite" class="material-icons">clear</i>
                     </div>
                 </div>
             </div>

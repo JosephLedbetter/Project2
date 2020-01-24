@@ -3,9 +3,7 @@
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
-  
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
+    window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
       let dropdowns = document.getElementsByClassName("dropdown-content");
       let i;
@@ -18,12 +16,11 @@ function myFunction() {
     }
   }
 
+// DROPDOWN ITEMS TO DISPLAY FOR CATEGORY: PROTEIN
   function catFunctionProtein() {
     document.getElementById("proteinDropdown").classList.toggle("show");
   }
-  
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
+    window.onclick = function(event) {
     if (!event.target.matches('.drop-click')) {
       let dropdowns = document.getElementsByClassName("category-dropdown");
       let i;
@@ -36,12 +33,11 @@ function myFunction() {
     }
   }
 
+// DROPDOWN ITEMS TO DISPLAY FOR CATEGORY: VEGGIES
   function catFunctionVeggie() {
     document.getElementById("veggiesDropdown").classList.toggle("show");
   }
-  
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
+    window.onclick = function(event) {
     if (!event.target.matches('.drop-click')) {
       let dropdowns = document.getElementsByClassName("category-dropdown");
       let i;
@@ -54,13 +50,11 @@ function myFunction() {
     }
   }
 
-
+// DROPDOWN ITEMS TO DISPLAY FOR CATEGORY: CARBOHYDRATE
   function catFunctionCarb() {
     document.getElementById("carbDropdown").classList.toggle("show");
   }
-  
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
+    window.onclick = function(event) {
     if (!event.target.matches('.drop-click')) {
       let dropdowns = document.getElementsByClassName("category-dropdown");
       let i;
@@ -73,13 +67,11 @@ function myFunction() {
     }
   }
 
-
+// DROPDOWN ITEMS TO DISPLAY FOR CATEGORY: DAIRY
   function catFunctionDairy () {
     document.getElementById("dairyDropdown").classList.toggle("show");
   }
-  
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
+    window.onclick = function(event) {
     if (!event.target.matches('.drop-click')) {
       let dropdowns = document.getElementsByClassName("category-dropdown");
       let i;
@@ -92,15 +84,11 @@ function myFunction() {
     }
   }
 
-  $("p").on("click", function(event){
-    event.preventDefault();
-    console.log('retrieve product');
 
-    // for(let i=0; i< arguments.product.length; i++){
-    //   let newItem = a.product[i]
-    // }
-
-   console.log($("p"));
-
-    $("#myDropdown").append('<p> ' + $("#id") + '</p>')
-  });
+//ADDING SPECIFIC FOOD ITEM TO THE CURRENT INVENTORY LIST
+$(".food").on("click",function (event) {
+event.preventDefault();
+var id=$(this).attr("id");
+console.log(id);
+$("#myDropdown").append("<button>"+id+"<i class='material-icons'>add</i></button>");
+});
