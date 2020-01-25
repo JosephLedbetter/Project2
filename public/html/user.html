@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../styles/userstyle.css">
 
@@ -33,100 +33,119 @@
 
                 <div class="cat-drop">
                     <button onclick="catFunctionProtein()" class="drop-click">Protein</button>
-                        <div id="proteinDropdown" class="category-dropdown">
-                            <button id="chicken" class="food">Chicken</button>
-                            <button id="pork" class="food">Pork</button>
-                            <button id="fish class="food">Fish</button>
-                            <button id="beef" class="food">Beef</button>
-                        
-                        </div>
+                    <div id="proteinDropdown" class="category-dropdown">
+                        <button id="chicken" class="food">Chicken</button>
+                        <button id="pork" class="food">Pork</button>
+                        <button id="fish class=" food">Fish</button>
+                        <button id="beef" class="food">Beef</button>
+
+                    </div>
                 </div>
                 <br>
-                
 
-        <!-- input section to enter a new category and food item to the list above -->
-                
-
+                <!-- input section to enter a new category and food item to the list above -->
                 <div class="cat-drop">
                     <button onclick="catFunctionVeggie()" class="drop-click">Vegetable</button>
-                            <div id="veggiesDropdown" class="category-dropdown">
-                                <button id="broccoli" class="food">Broccoli</button>
-                                <button id="gbean" class="food">Green Beans</button>
-                                <button id="lettuce" class="food">Lettuce</button>
-                                <button id="tomato" class="food">Tomato</button>
-                            </div>
+                    <div id="veggiesDropdown" class="category-dropdown">
+                        <button id="broccoli" class="food">Broccoli</button>
+                        <button id="gbean" class="food">Green Beans</button>
+                        <button id="lettuce" class="food">Lettuce</button>
+                        <button id="tomato" class="food">Tomato</button>
+                    </div>
                 </div>
 
                 <div class="cat-drop">
                     <button onclick="catFunctionCarb()" class="drop-click">Carbohydrate</button>
-                            <div id="carbDropdown" class="category-dropdown">
-                                <button class="food" id="rice">Rice</button>
-                                <button class="food"id="bread">Bread</button>
-                                <button class="food"id="oatmeal">Oatmeal</button>
-                                <button class="food" id="pasta">Pasta</button>
-                            </div>
+                    <div id="carbDropdown" class="category-dropdown">
+                        <button class="food" id="rice">Rice</button>
+                        <button class="food" id="bread">Bread</button>
+                        <button class="food" id="oatmeal">Oatmeal</button>
+                        <button class="food" id="pasta">Pasta</button>
+                    </div>
                 </div>
 
                 <div class="cat-drop">
                     <button onclick="catFunctionDairy()" class="drop-click">Dairy</button>
-                            <div id="dairyDropdown" class="category-dropdown">
-                                <button id="milk" class="food">Milk</button>
-                                <button id="cheese" class="food">Cheese</button>
-                                <button id="sour cream" class="food">Sour Cream</a>
-                                <button id="cream" class="food" >Cream</button>
-                            </div>
+                    <div id="dairyDropdown" class="category-dropdown">
+                        <button id="milk" class="food">Milk</button>
+                        <button id="cheese" class="food">Cheese</button>
+                        <button id="sour cream" class="food">Sour Cream</a>
+                            <button id="cream" class="food">Cream</button>
+                    </div>
                 </div>
             </div>
             <form class="new-item">
                 <div class="new-category form-group">
                     <label for="exampleInputCategory">Category</label>
-                    <input type="text" class="form-control" id="exampleInputCategory" aria-describedby="categoryHelp">
+                    <input type="text" class="form-control" id="new-category" aria-describedby="categoryHelp">
                 </div>
                 <div class="new-ingredient form-group">
                     <label for="exampleInputItem">Food Item</label>
-                    <input type="text" class="form-control" id="exampleInputItem">
+                    <input type="text" class="form-control" id="new-food-item">
                 </div>
                 <br>
+                <a href=""><button class="logout">log out</button></a>
                 <a href=""><button class="submit">Submit New Item</button></a>
             </form>
         </div>
 
-        <!-- (Top-to-Bottom) right side user page container -->
+<!-- (Top-to-Bottom) right side user page container -->
         <div class="container-right">
 
-        <!-- Welcome Banner holder -->
+            <!-- Welcome Banner holder -->
             <div class="jumbo-container">
-                <div class="jumbotron-welcome">
-                    <h1 class="banner"><strong>"Welcome to Foodify...!"</strong></h1>
-                    <a href=""><button class="logout">log out</button></a>
-                </div>
-
-
-
-
-        <!-- current inventory button -->
+                <h1 class="banner"><strong>"Welcome to Foodify...!"</strong></h1>
+                <!-- current inventory button -->
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Current Inventory</button>
                     <div id="myDropdown" class="dropdown-content">
                         <button id="chicken" class="ingredient">Chicken<i class="material-icons">add</i></button>
-                        <button id="broccoli"class="ingredient">Broccoli<i class="material-icons">add</i></button>
-                        <button id="french bread"class="ingredient">French Bread<i class="material-icons">add</i></button>
-                        <button id ="milk"class="ingredient"><i class="material-icons">add</i>Milk</button>
+                        <button id="broccoli" class="ingredient">Broccoli<i class="material-icons">add</i></button>
+                        <button id="french bread" class="ingredient">French Bread<i
+                                class="material-icons">add</i></button>
+                        <button id="milk" class="ingredient"><i class="material-icons">add</i>Milk</button>
                     </div>
                 </div>
             </div>
 
-            <!-- container that will hold the items returned when passed thorugh Recipe API -->
+
+
+    <!-- CONTAINER THAT WILL HOLD THE ITEMS RETURNED WHEN PASSED THROUGH API -->
             <div class="return-container">
                 <div class="return-object">
                     <div class="object">
-                        <div>
-                        <p class="ret-label">Returned</p>
+
+    <!-- RECIPE RETURNED SHOULD BE ENTERED HERE -->
+                        <div class="preference-holder"">
+                           <p> Recipe returned</p>
+                        </div>
+
+    <!-- ICONS FOR ADDING TO FAVORITES -->
+                        <div class=" preference">
+                            <i id="add-favorite" class="material-icons">add</i>
+                            <i id="delete-favorite" class="material-icons">clear</i>
+                        </div>
                     </div>
-                    <div class="preference"">
-                        <i id="add-favorite" class="material-icons">add</i>
-                        <i id="delete-favorite" class="material-icons">clear</i>
+
+                    
+                    
+                    <!-- <div class="favorites-container">
+                        <div class="object">
+     RECIPE RETURNED SHOULD BE ENTERED HERE
+                            <div class="preference-holder"">
+                                <p> Recipe returned</p>
+                            </div>
+                            
+     ICONS FOR ADDING TO FAVORITES
+                            <div class=" preference">
+                                <i id="add-favorite" class="material-icons">add</i>
+                                <i id="delete-favorite" class="material-icons">clear</i>
+                            </div>
+                        </div>
                     </div>
+                     -->
+
+
                 </div>
             </div>
         </div>

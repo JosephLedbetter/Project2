@@ -92,3 +92,18 @@ var id=$(this).attr("id");
 console.log(id);
 $("#myDropdown").append("<button>"+id+"<i class='material-icons'>add</i></button>");
 });
+
+$(".submit").on("click",function (event) {
+  event.preventDefault();
+  let newCategory =$("#new-category").val().trim();
+  console.log(newCategory);
+  $("#cat-drop").append("<button>"+newCategory+ "</button>");
+  });
+
+//ADDING NEW FOOD ITEM TO THE CURRENT INVENTORY LIST
+$(".submit").on("click",function (event) {
+  event.preventDefault();
+  let =$("#new-food-item").val().trim();
+  console.log(id);
+  $("#myDropdown").append("<button>"+id+"<i class='material-icons'>add</i></button>");
+  });
