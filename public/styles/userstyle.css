@@ -1,9 +1,10 @@
-body, html{
-    background: #FFBE98;
+body,
+html {
+    background: #c5cae9;
 }
 
 /* ENTIRE PAGE CONTAINER */
-.full-screen-container{
+.full-screen-container {
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -12,11 +13,11 @@ body, html{
 }
 
 /* LEFT SIDE CONTAINER BOX THAT HOLDS THE CATEGORY SELECTOR BOXES */
-.container-left{
+.container-left {
     position: absolute;
     left: 0;
     top: 0;
-    background: white;
+    background: #c5cae9;
     width: 30%;
     height: 100vh;
     margin: 0;
@@ -25,19 +26,19 @@ body, html{
 
 
 /* TOP/LEFT LOGO CONTAINER */
-.logo-holder{
+.logo-holder {
     position: relative;
     width: 100%;
     height: 30%;
 }
 
-.logo-background{
+.logo-background {
     width: 150%;
     height: 100%;
     margin: 0;
 }
 
-.logo-foreground{
+.logo-foreground {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -50,15 +51,15 @@ body, html{
 
 
 /* HOLDER CONTAINING THE SELECTOR BOXES FOR SPECIFIC FOOD ITEMS */
-.category-holder{
-    background: white;
+.category-holder {
+    background: #c5cae9;
     position: absolute;
     width: 100%;
     bottom: 25%;
 }
 
 /* EACH SPECIFIED FOOD CATEGORY */
-.category{ 
+.category {
     position: relative;
     background: white;
     border: 1px solid grey;
@@ -70,62 +71,65 @@ body, html{
     border-radius: 10px;
 }
 
-.drop-click{
+.drop-click {
     width: 100%;
     display: block;
-	font-size: 1.1em;
-	font-weight: lighter;
-	text-transform: uppercase;
-	padding: 10px 15px;
-	margin: 10px auto;
-	color: white;
-	background-color: #b8b8b8;
-	background: linear-gradient(#cac8c8, #888888);
-	border: 0 none;
-	box-shadow: 2px 2px 2px 2px gray;
+    font-size: 1.1em;
+    font-weight: lighter;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 10px auto;
+    color: white;
+    background-color: #b8b8b8;
+    background: linear-gradient(#cac8c8, #888888);
+    border: 0 none;
+    box-shadow: 2px 2px 2px 2px gray;
     cursor: pointer;
     outline: none !important;
 }
 
-.drop-click:hover{
+.drop-click:hover {
     background: #dddddd;
     color: black;
     outline: none !important;
 }
 
-.category-holder{
+.category-holder {
     width: 100%;
     height: 32%;
-    border: 1px solid gray;
     top: 15.8em;
 }
 
-.cat-drop{
+.cat-drop {
     position: relative;
     display: inline-block;
     width: 100%;
     outline: none !important;
 }
 
-.category-dropdown{
+.drop-click:hover {
+    border: 2px solid red;
+}
+
+.category-dropdown {
     border-radius: 12px;
     border: 1px solid black;
     display: none;
-    position: absolute; 
+    position: absolute;
     top: 0;
     width: 5em;
-    height: 12.5em;   
+    height: 12.5em;
     right: -20em;
     background-color: white;
     min-width: 20em;
     overflow: auto;
-    box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.2);
+    box-shadow: 0px 10px 16px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0px -8px -16px 0px #f0f0f0;
     z-index: 1;
     outline: none !important;
-  }
+}
 
-  .category-dropdown button{
+.category-dropdown button {
     box-shadow: 2px gray;
     color: black;
     padding: 12px 16px;
@@ -135,9 +139,9 @@ body, html{
     z-index: 99;
     outline: none !important;
 
-  }
+}
 
-  .category-dropdown button:hover{
+.category-dropdown button:hover {
     color: black;
     border: none;
     outline: none;
@@ -145,31 +149,35 @@ body, html{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    border: 2px solid red;
     outline: none !important;
 
-  }
-
-  
-  .show {display: block;}
+}
 
 
-  .new-item{
-      position: absolute;
-      margin: 0 auto;
-      height: 28%;
-      width: 85%;
-      bottom: .5em;
-      left: 1.5em;
-      bottom: 2em;
-  }
+.show {
+    display: block;
+}
 
-#choice{
+
+.new-item {
+    background: #c5cae9;
+    position: absolute;
+    margin: 0 auto;
+    height: 28%;
+    width: 85%;
+    bottom: .5em;
+    left: 1.5em;
+    bottom: 2em;
+}
+
+#choice {
     width: 100%;
     height: 2.5em;
 }
 
 
-.logout{
+.logout {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -177,142 +185,140 @@ body, html{
     border-radius: 5px;
     padding: 5px;
     color: white;
-	background-color: #b8b8b8;
-	background: linear-gradient(#cac8c8, #888888);
-	border: 0 none;
-	box-shadow: 2px 2px 2px 2px gray;
+    background-color: #b8b8b8;
+    background: linear-gradient(#cac8c8, #888888);
+    border: 0 none;
+    box-shadow: 2px 2px 2px 2px gray;
 }
 
-.submit{
+.logout:hover {
+    border: 2px solid red;
+}
+
+.submit {
     position: absolute;
     bottom: 0;
     right: 0;
     padding: 5px;
     border-radius: 5px;
     color: white;
-	background-color: #b8b8b8;
-	background: linear-gradient(#cac8c8, #888888);
-	border: 0 none;
-	box-shadow: 2px 2px 2px 2px gray;
+    background-color: #b8b8b8;
+    background: linear-gradient(#cac8c8, #888888);
+    border: 0 none;
+    box-shadow: 2px 2px 2px 2px gray;
 }
 
- 
+.submit:hover {
+    border: 2px solid red;
+}
+
+
 
 /* ------------------------------------------------------ */
 /* RIGHT SIDE CONTAINER BOX HOLDING JOMBO-CONTAINER & THE RETURNED RECIPE CONTAINER CONTAINER */
 
-.container-right{
+.container-right {
     position: absolute;
     right: 0;
     top: 0;
-    background: #F5BAFF;
+    background: white;
     border: 1px solid grey;
     width: 70%;
     height: 100vh;
 }
 
-h1{
-font-size: 1em;
-text-align: center;
-padding: 1em;
+h1 {
+    font-size: 1em;
+    text-align: center;
+    padding: 1em;
 }
 
 /* FULL TOP CONTAINER INCLUDING WELCOME MESSAGE AND DROPDOWN NAVBAR */
-.jumbo-container{
+.jumbo-container {
     position: relative;
-    background: white;
+    background: #c5cae9;
     width: 100%;
     height: 30%;
     text-align: auto;
 }
 
 /* WELCOME PROMPT PLACED AT THE TOP OF THE PAGE */
-.jumbotron-welcome{
+.jumbotron-welcome {
     height: 50%;
     width: 100%;
-    background:  white;
+    background: #c5cae9;
 }
 
-.banner{
+.banner {
     font-size: 3em;
+    background-color: #c5cae9;
     font-family: 'Oleo Script', cursive;
-    color: black;
-    text-shadow: 0 2px 2px #858484;
-    text-shadow:0px 0px 2px 3px gray;
+    color: white;
+    text-shadow: 0 2px 2px #ad0202;
     padding: 20px;
 }
 
 
 /* BUTTON FOR SEARCHING CURRENT INVENTORY SELECTOR- TO BE PASSED THROUGH THE API */
-.dropbtn{
+.dropbtn {
     width: 100%;
     display: block;
-	font-size: 1.1em;
-	font-weight: lighter;
-	text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: lighter;
+    text-transform: uppercase;
     padding: 15px 15px;
     color: white;
     bottom: 10em;
-	background-color: #b8b8b8;
-	background: -webkit-linear-gradient(#cac8c8, #555);
-	background: linear-gradient(#cac8c8, #888888);
-	border: 0 none;
-	box-shadow: 2px 2px 2px 2px gray;
+    background-color: #b8b8b8;
+    background: -webkit-linear-gradient(#cac8c8, #747373);
+    background: linear-gradient(#cac8c8, #777474);
+    border: 0 none;
+    box-shadow: 2px 2px 2px 2px gray;
     cursor: pointer;
     outline: none !important;
 
 }
 
-.dropbtn:hover{
+.dropbtn:hover:active {
     background: #dddddd;
     color: black;
-    outline: none !important;
+    border: red;
 }
 
-.dropbtn:active{
-    background: #dddddd;
-    color: black;
-    border: none;
-    outline: none !important;
-}
-
-.dropdown{
+.dropdown {
     position: relative;
     display: inline-block;
     width: 100%;
-    border: none;
-    outline: none !important;
+    border: 1px solid gray;
 }
 
-.dropdown:active{
+.dropdown:hover {
     position: relative;
     display: inline-block;
     width: 100%;
-    border: none;
-    outline: none !important;
+    border: 2px solid red;
 }
 
-.dropdown-content{
-  display: none;
-  text-transform: uppercase;
-  border-radius: 0 0 10px 10px;
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 3em;
-  width: 100%;
-  text-align: center;
-  box-shadow: 2px 2px 2px 2px #6261619b;
-  background-color: white;
-  min-width: 160px;
-  overflow: auto;
-  border: 1px solid black;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  outline: none !important;
+.dropdown-content {
+    display: none;
+    text-transform: uppercase;
+    border-radius: 0 0 10px 10px;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 3em;
+    width: 100%;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px #6261619b;
+    background-color: white;
+    min-width: 160px;
+    overflow: auto;
+    border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
-.dropdown-content button{
+.dropdown-content button {
     box-shadow: 2px gray;
     text-transform: uppercase;
     color: black;
@@ -322,21 +328,20 @@ padding: 1em;
     display: block;
     z-index: 99;
     background: 1px solid black;
-    outline: none !important;
+    border: .2px solid gray;
 }
 
 .dropdown-content button:hover {
     background: #ddd;
     color: black;
-    outline: none !important;
+    border: 2px solid red;
 }
 
-.ingredient{
+.ingredient {
     position: relative;
-    outline: none !important;
 }
 
-.material-icons{
+.material-icons {
     font-size: 1rem;
     position: absolute;
     right: 0;
@@ -344,46 +349,74 @@ padding: 1em;
     outline: none !important;
 }
 
-#clear{
+#clear {
     position: absolute;
     bottom: 0;
     right: 0;
 }
 
 
-.show {display: block;}
+.show {
+    display: block;
+}
 
 
 /* BEGINNING OF THE RETURNED OBJECTS FROM THE SEARCH OF THE RECIPES */
 
-.return-container{
+.return-container {
     align-items: center;
 }
 
-.return-object{
+.return-object {
     position: relative;
     width: 98%;
-    height: 40em;
-    background: white;
+    height: 35em;
+    background: #f5deb3;
     border: 1px solid gray;
+    border-radius: 10px;
     margin: 0 auto;
     margin-top: 1em;
     padding: 8px;
 }
 
-.object{ 
+p {
+    position: absolute;
+    top: .5em;
+    left: 1.5em;
+}
+
+.object {
     width: 10.5em;
     height: 10.5em;
     margin: 5px;
-    background-color: greenyellow;
+    background-color: white;
+    border-radius: 10px;
     position: relative;
     float: left;
 }
 
-.ret-label{
-    padding: 2px;
+.image-holder {
+    position: absolute;
+    bottom: 0;
+    height: 7.6em;
+    width: 100%;
+    background: white;
+    object-fit: stretch;
+    z-index: 3;
 }
 
+img {
+    max-width: 100%;
+    max-height: 110%;
+    bottom: 0;
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+/* .ret-label{
+    padding: 10px;
+} */
+/* 
 .preference-holder{
     position: relative;
     bottom: 0;
@@ -397,98 +430,100 @@ padding: 1em;
     width: 100%;
     background: #dddcdc;
     position: aboslute;
-}
+} */
 
-#delete-favorite{
+#delete-favorite {
     position: relative;
     width: 1em;
     height: 1em;
     background: #dddcdc;
     box-shadow: -2px -2px 2px 0 white,
-    2px 2px 2px 0 #5a5a5a;
+        2px 2px 2px 0 #5a5a5a;
     left: -.7em;
     font-size: 1.5em;
 }
+
 /* MEDIA QUERY AT TOTAL 756PX */
 @media only screen and (max-width: 756px) {
 
-.logo-foreground{
-    width: 100%;
-    height: 70%;
-    margin: 0;
-    position: absolute;
-    top: 2.5em;
-    left: 0;
-}
+    .logo-foreground {
+        width: 100%;
+        height: 70%;
+        margin: 0;
+        position: absolute;
+        top: 2.5em;
+        left: 0;
+    }
 
-.logout{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 35%
-}
+    .logout {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 35%
+    }
 
 }
 
 /* MEDIA QUERY AT TOTAL 640PX */
 @media only screen and (max-width: 640px) {
 
-.category-holder{
-    height: 20em;
-    position: absolute;
-    top: 15em;
-}
+    .category-holder {
+        height: 20em;
+        position: absolute;
+        top: 12em;
+    }
 
-.new-item{
-    position: absolute;
-    margin: 0 auto;
-    height: 15em;
-    width: 95%;
-    bottom: .5em;
-    left: .5em;
-}
+    .new-item {
+        position: absolute;
+        margin: 0 auto;
+        height: 15em;
+        width: 95%;
+        bottom: .5em;
+        left: .5em;
+    }
 
-.submit{
+    .submit {
         position: absolute;
         width: 100%;
         bottom: 2em;
         right: 0;
     }
 
-.logout{
+    .logout {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%
     }
 
-.jumbo-container{
+    .jumbo-container {
         position: relative;
         background: white;
         width: 100%;
         height: 25%;
         text-align: auto;
     }
-.dropdown-content{
-    position: absolute;
-    left: 0;
-    top: 4em;
-    width: 20em;
-    text-align: center;
-    box-shadow: 2px 2px 2px 2px #6261619b;
-    background-color: white;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
 
-  .logo-foreground{
-    width: 110%;
-    height: 65%;
-    margin: 0;
-    position: absolute;
-    top: 2.5em;
-    left: 0;
-  }
+    .dropdown-content {
+        position: absolute;
+        left: 0;
+        top: 4em;
+        width: 20em;
+        text-align: center;
+        box-shadow: 2px 2px 2px 2px #6261619b;
+        background-color: white;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .logo-foreground {
+        width: 110%;
+        height: 65%;
+        margin: 0;
+        position: absolute;
+        top: 2.5em;
+        left: 0;
+    }
 }

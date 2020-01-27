@@ -26,6 +26,16 @@ const usser={
         orm.checkING(id,function (res) {
             cb(res);
         })
+    },
+    giveItemID: function (name,cb) {
+        orm.giveItemID(name,function (res) {
+            cb(res);
+        })
+    },
+    insert: function (usserid,id,cb) {
+        orm.insert(usserid,id,function (res) {
+            cb(res);
+        })
     }
 }
 module.exports=usser;

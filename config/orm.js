@@ -37,7 +37,22 @@ checkING: function (id,cb) {
     cb(result);
   })
 
-}
+},
+giveItemID: function (name,cb) {
+  connection.query("SELECT id FROM ingredients WHERE ingredient_name=? ",name,function (err,result) {
+    if(err) throw err;
+    cb(result);
+  })
+},
+insert: function ( usserid,id,cb) {
+  
+  
+const queryString = `INSERT INTO ussers_ingredients (usser_id,ingredient_id) VALUES (?,?) ` ;
+connection.query(queryString,[usserid,id], function (err,result) {
+    if(err) throw err;
+    cb(result);
+})
+},
 }
 module.exports = orm;
 

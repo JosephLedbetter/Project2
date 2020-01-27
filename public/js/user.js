@@ -1,5 +1,80 @@
+// function createButtons(foodDiv,name) {
+//   var newButton=$(`<button>${name}</button>`);
+//   $(newButton).attr('id',name);
+//   //$(newButton).attr('onclick',"sendToInvetary()");
+//   $(newButton).attr('class',"food")
+//   $(`.${foodDiv}`).append(newButton)
+// }
+
+// createButtons("proteinDropdown","beef");
+//     createButtons("proteinDropdown","chicken");
+//     createButtons("proteinDropdown","pork");
+//     createButtons("proteinDropdown","fish");
+//     -------------------------------
+//     createButtons("vegetable","brocoli");
+//     createButtons("vegetable","green beans");
+//     createButtons("vegetable","tomato");
+//     createButtons("vegetable","lettuce");
+//     //------------------------------
+//     createButtons("carbohydrate","bread");
+//     createButtons("carbohydrate","rice");
+//     createButtons("carbohydrate","outmeal");
+//     createButtons("carbohydrate","pasta");
+//     //------------------------------
+//     createButtons("dairy","milk");
+//     createButtons("dairy","cheese");
+//     createButtons("dairy","sour cream");
+//     createButtons("dairy","cream");
+//------------------------------------------------------------------------------------
+var mainUsserID=2;
+var ingredientID=[];
+var ingredientName=[];
+var itemId={
+  id:0,
+  usserid:mainUsserID
+};
+function activateUsser() {
+
+  $.get(`/usserpage/${mainUsserID}`,function (data) {
+      $("#myname").text(data);
+     
+  });
+  $.get(`/inventory/${mainUsserID}`,function (data) {
+      ingredientID=data;
+     
+      console.log(data)
+         for (let index = 0; index < ingredientID.length; index++) {
+          $.get(`/inventary2/${ingredientID[index]}`,function (data) {
+              ingredientName.push(data)
+              // $(".inventary").text(ingredientName);
+              $("#myDropdown").append(`<button id="inv${ingredientName[index]}" class="ingredient">${ingredientName[index]}<i class="material-icons">delete</i></button>`)
+          })
+          
+      };
+  });
+
+  
+}
+activateUsser();
 
 
+function itemSelected() {
+  //var itemName=$(this).attr("id")
+  var itemName="pasta";
+  $.get(`/item/${itemName}`,function (data) {
+    var itemId={
+      id:data,
+      usserid:mainUsserID
+    };
+    
+    console.log(itemId.id)
+    $.post(`/additem`,itemId).done(function (data) {
+      console.log("added new items to usser")
+      location.reload();
+  })
+  })
+}
+//___________________________________________________________________________________
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
@@ -85,24 +160,24 @@ function myFunction() {
   }
 
 
-//ADDING SPECIFIC FOOD ITEM TO THE CURRENT INVENTORY LIST
-$(".food").on("click",function (event) {
-event.preventDefault();
-var id=$(this).attr("id");
-console.log(id);
-$("#myDropdown").append("<button>"+id+"<i class='material-icons'>add</i></button>");
-});
+// //ADDING SPECIFIC FOOD ITEM TO THE CURRENT INVENTORY LIST
+// $(".food").on("click",function (event) {
+// event.preventDefault();
+// var id=$(this).attr("id");
+// console.log(id);
+// $("#myDropdown").append("<button>"+id+"<i class='material-icons'>add</i></button>");
+// });
 
 
-// ADDING NEW CATEGORY TO THE LIST (LEFT SIDE)
-$(".submit").on("click",function (event) {
-  event.preventDefault();
+// // ADDING NEW CATEGORY TO THE LIST (LEFT SIDE)
+// $(".submit").on("click",function (event) {
+//   event.preventDefault();
 
-  let newCategory =$("#new-category").val().trim();
-  console.log(newCategory);
+//   let newCategory =$("#new-category").val().trim();
+//   console.log(newCategory);
 
-  $("#cat-drop").append("<button>"+newCategory+ "</button>");
-  });
+//   $("#cat-drop").append('<button>' + newCategory + '<i class="material-icons">delete</i></button>');
+//   });
 
 
 

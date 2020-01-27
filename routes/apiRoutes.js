@@ -11,6 +11,12 @@ router.post('/api/addUsser', function (req, res) {
     })
     res.end();
 });
+router.post(`/additem`,function (req,res) {
+    usser.insert(req.body.usserid,req.body.id,function (result) {
+        
+    })
+    res.end();
+})
 
 router.get("/findUsser/:name/:pass", function (req, res) {
     console.log(req.params.pass)
@@ -49,6 +55,14 @@ router.get("/inventary2/:id", function (req, res) {
         res.json(result[0].ingredient_name);
 
     })
-})
+});
+
+router.get("/item/:name",function (req,res) {
+    usser.giveItemID(req.params.name,function (result) {
+        res.json(result[0].id);
+    })
+}); 
+
+
 
 module.exports = router;
