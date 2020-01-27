@@ -1,24 +1,54 @@
-var db = require("../models");
+const usser = require("../models/usser.js");
+const express = require("express");
 
-module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
+const router = express.Router();
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+    
+    router.post('/api/addUsser', function (req, res) {
+    
+        usser.insertUsser(req.body.name,req.body.pass,function (result) {
+            
+        })
+        res.end();
     });
-  });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+    router.get("/findUsser/:name/:pass",function (req,res) {
+        console.log(req.params.pass)
+        console.log(req.params.name)
+        usser.selectUsser(req.params.name,req.params.pass,function (result) {
+            console.log(result)
+            res.json(result[0].id);
+        })
+        
     });
-  });
-};
+
+    router.get("/usserpage/:id",function (req,res) {
+        
+        
+        usser.identifyUsser(req.params.id,function (result) {
+            
+            res.json(result[0].ussername);
+        })
+        
+    });
+     router.get("/inventory/:id",function (req,res) {
+         usser.checkUsserING(req.params.id,function (result) {
+            
+            var idarray=[];
+            for (let index = 0; index < result.length; index++) {
+                idarray.push(result[index].ingredient_id);
+                
+            }
+            res.json(idarray);
+         })
+     });
+
+     router.get("/inventary2/:id",function (req,res) {
+        usser.checkING(req.params.id,function (result) {
+           console.log(result)
+           res.json(result[0].ingredient_name);
+          
+        })
+    })
+    
+    module.exports = router;
