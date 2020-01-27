@@ -93,17 +93,29 @@ console.log(id);
 $("#myDropdown").append("<button>"+id+"<i class='material-icons'>add</i></button>");
 });
 
+
+// ADDING NEW CATEGORY TO THE LIST (LEFT SIDE)
 $(".submit").on("click",function (event) {
   event.preventDefault();
+
   let newCategory =$("#new-category").val().trim();
   console.log(newCategory);
+
   $("#cat-drop").append("<button>"+newCategory+ "</button>");
   });
 
-//ADDING NEW FOOD ITEM TO THE CURRENT INVENTORY LIST
-$(".submit").on("click",function (event) {
-  event.preventDefault();
-  let =$("#new-food-item").val().trim();
-  console.log(id);
-  $("#myDropdown").append("<button>"+id+"<i class='material-icons'>add</i></button>");
-  });
+
+
+// SHOWING/HIDING 'CURRENT INVENTORY' 
+
+$(".ingredient").on("click", function(){
+console.log('button working');
+  var ingredient = $(".dropdown-content");
+  console.log(ingredient);
+  if(ingredient.style.display == 'block')
+  {ingredient.style = 'none';
+}
+else{
+  ingredient.style.display = 'block'
+}
+});

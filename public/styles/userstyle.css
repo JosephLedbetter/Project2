@@ -293,6 +293,7 @@ padding: 1em;
 }
 
 .dropdown-content{
+  display: none;
   text-transform: uppercase;
   border-radius: 0 0 10px 10px;
   display: none;
@@ -398,17 +399,6 @@ padding: 1em;
     position: aboslute;
 }
 
-#add-favorite{
-    position: relative;
-    width: 1em;
-    height: 1em;
-    background: #dddcdc;
-    box-shadow: -2px -2px 2px 0 white,
-    2px 2px 2px 0 #5a5a5a;
-    right: -5.5em;
-    font-size: 1.5em;
-}
-
 #delete-favorite{
     position: relative;
     width: 1em;
@@ -419,19 +409,6 @@ padding: 1em;
     left: -.7em;
     font-size: 1.5em;
 }
-
-
-/*FAVORITES CONTAINER AND FOLLOWING STYLING FOR THE ADDITION OF THE RECIPES ADDED  */
-
-.favorites-container{
-    width: 100%;
-    height: 50%;
-    background-color: lightblue;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
 /* MEDIA QUERY AT TOTAL 756PX */
 @media only screen and (max-width: 756px) {
 
