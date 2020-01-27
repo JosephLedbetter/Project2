@@ -13,27 +13,29 @@
     <link rel="manifest" href="../photos/favicon_io/site.webmanifest">
 
     <!-- CSS  -->
-    <link rel="stylesheet" href="../styles/reset.css">
+    <link href="../styles/reset.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="../styles/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fredericka+the+Great|Pacifico|Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css" rel="stylesheet">
+    <link href="../styles/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="../styles/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="../styles/log.css" type="text/css" rel="stylesheet" media="screen,projection" />
-
 </head>
 
-<body class="log-page-background">
+<body >
     <nav class="indigo lighten-4" role="navigation">
         <div class="nav-wrapper container">
-            <!-- <a id="logo-container" href="index.html" class="brand-logo">Logo</a> -->
             <ul class="right hide-on-med-and-down">
-                <li><a href="../html/signup.html">Sign up</a></li>
+                <li><a href="../../index.html">Home</a></li>
                 <li><a href="../html/log.html">Login</a></li>
+                <li><a href="../html/signup.html">Sign Up</a></li>
+
             </ul>
 
             <ul id="nav-mobile" class="sidenav">
-                <li><a href="../html/signup.html">Sing Up</a></li>
+                <li><a href="../../index.html">Home</a></li>
                 <li><a href="../html/log.html">Login</a></li>
+                <li><a href="../html/signup.html">Sign Up</a></li>
             </ul>
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
@@ -42,14 +44,10 @@
     <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
             <div class="container">
-                <br><br>
-                <h1 class="header center teal-text text-lighten-2"></h1>
                 <div class="row center">
                     <h5 class="header col s12 light">"A new way to know your kitchen"
                     </h5>
                 </div>
-
-                <br><br>
 
             </div>
         </div>
@@ -58,65 +56,39 @@
     </div>
 
 
-    <div class="container">
-        <div class="row">
 
-            <div class="section"></div>
-            <main>
-                <center>
-                    <img class="responsive-img" style="width: 250px;" src="#" />
-                    <div class="section"></div>
 
-                    <h5 class="indigo-text">Please, login into your account</h5>
-                    <div class="section"></div>
 
-                    <div class="container">
-                        <div class="z-depth-1 grey lighten-4 row"
-                            style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
-
-                            <form class="col s12" method="post">
-                                <div class='row'>
-                                    <div class='col s12'>
-                                    </div>
-                                </div>
-
-                                <div class='row'>
-                                    <div class='input-field col s12'>
-                                        <input class='validate' type='email' name='email' id='email' />
-                                        <label for='email'>Enter your email</label>
-                                    </div>
-                                </div>
-
-                                <div class='row'>
-                                    <div class='input-field col s12'>
-                                        <input class='validate' type='password' name='password' id='password' />
-                                        <label for='password'>Enter your password</label>
-                                    </div>
-                                    <label style='float: right;'>
-                                        <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
-                                    </label>
-                                </div>
-
-                                <br />
-                                <center>
-                                    <div class='row'>
-                                        <button type='submit' name='btn_login'
-                                            class='col s12 btn btn-large waves-effect orange'>Login</button>
-                                    </div>
-                                </center>
-                            </form>
-                        </div>
+    <div id="user-login" class="row">
+        <div class="col s12 z-depth-6 card-panel">
+            <form class="login-form">
+                <div class="row margin">
+                    <div class="input-field col s12">
+                        <i class="mdi-social-person-outline prefix"></i>
+                        <input class="validate" id="user_email" type="email">
+                        <label for="email" data-error="wrong" data-success="right" class="center-align">Email</label>
                     </div>
-                </center>
+                </div>
+                <div class="row margin">
+                    <div class="input-field col s12">
+                        <i class="mdi-action-lock-outline prefix"></i>
+                        <input id="user_pass" type="password">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
 
-                <div class="section"></div>
-                <div class="section"></div>
-            </main>
-
+                <div class="row">
+                    <div class="input-field col s12">
+                        <a href="./user.html" class="btn waves-effect waves-light black col s12">Login</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 m6 l6">
+                        <p class="margin medium-small"><a href="./signup.html">Register Now!</a></p>
+                    </div>
+                </div>
+            </form>
         </div>
-    </div>
-
-    </div>
     </div>
 
 
@@ -132,9 +104,12 @@
 
 
     <!--  Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="../js/materialize.js"></script>
     <script src="../js/init.js"></script>
+    <script src="../js/log.js">
 
 </body>
 
