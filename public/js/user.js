@@ -85,24 +85,24 @@ function myFunction() {
   }
 
 
-//ADDING SPECIFIC FOOD ITEM TO THE CURRENT INVENTORY LIST
-$(".food").on("click",function (event) {
-event.preventDefault();
-var id=$(this).attr("id");
-console.log(id);
-$("#myDropdown").append("<button>"+id+"<i class='material-icons'>add</i></button>");
-});
+// //ADDING SPECIFIC FOOD ITEM TO THE CURRENT INVENTORY LIST
+// $(".food").on("click",function (event) {
+// event.preventDefault();
+// var id=$(this).attr("id");
+// console.log(id);
+// $("#myDropdown").append("<button>"+id+"<i class='material-icons'>add</i></button>");
+// });
 
 
-// ADDING NEW CATEGORY TO THE LIST (LEFT SIDE)
-$(".submit").on("click",function (event) {
-  event.preventDefault();
+// // ADDING NEW CATEGORY TO THE LIST (LEFT SIDE)
+// $(".submit").on("click",function (event) {
+//   event.preventDefault();
 
-  let newCategory =$("#new-category").val().trim();
-  console.log(newCategory);
+//   let newCategory =$("#new-category").val().trim();
+//   console.log(newCategory);
 
-  $("#cat-drop").append("<button>"+newCategory+ "</button>");
-  });
+//   $("#cat-drop").append('<button>' + newCategory + '<i class="material-icons">delete</i></button>');
+//   });
 
 
 
