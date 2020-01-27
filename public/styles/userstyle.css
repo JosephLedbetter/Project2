@@ -376,7 +376,8 @@ padding: 1em;
 
 p{
     position: absolute;
-    left: 5px;
+    top: .5em;
+    left: 1.5em;
 }
 
 .object{ 
@@ -388,6 +389,24 @@ p{
     position: relative;
     float: left;
 }
+
+.image-holder{
+    position: absolute;
+    bottom: 0;
+    height: 7.6em;
+    width: 100%;
+    background: white;
+    object-fit: stretch;
+    z-index: 3;
+}
+
+img{
+    max-width: 100%;
+    max-height: 110%;
+    bottom: 0;
+    border-radius: 0px 0px 10px 10px;
+}
+
 
 /* .ret-label{
     padding: 10px;
