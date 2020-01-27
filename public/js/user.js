@@ -1,38 +1,33 @@
-// function createButtons(foodDiv,name) {
-//   var newButton=$(`<button>${name}</button>`);
-//   $(newButton).attr('id',name);
-//   //$(newButton).attr('onclick',"sendToInvetary()");
-//   $(newButton).attr('class',"food")
-//   $(`.${foodDiv}`).append(newButton)
-// }
 
-// createButtons("proteinDropdown","beef");
-//     createButtons("proteinDropdown","chicken");
-//     createButtons("proteinDropdown","pork");
-//     createButtons("proteinDropdown","fish");
-//     -------------------------------
-//     createButtons("vegetable","brocoli");
-//     createButtons("vegetable","green beans");
-//     createButtons("vegetable","tomato");
-//     createButtons("vegetable","lettuce");
-//     //------------------------------
-//     createButtons("carbohydrate","bread");
-//     createButtons("carbohydrate","rice");
-//     createButtons("carbohydrate","outmeal");
-//     createButtons("carbohydrate","pasta");
-//     //------------------------------
-//     createButtons("dairy","milk");
-//     createButtons("dairy","cheese");
-//     createButtons("dairy","sour cream");
-//     createButtons("dairy","cream");
+// const axios = require("axios");
+// const keys=require("../../keys");
+
+
+// axios({
+//     "method":"GET",
+//     "url":"https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients",
+//     "headers":{
+//     "content-type":"application/octet-stream",
+//     "x-rapidapi-host":keys.host,
+//     "x-rapidapi-key":keys.key
+//     },"params":{
+//     "number":"4",
+//     "ranking":"1",
+//     "ignorePantry":"false",
+//     "ingredients":"oatmeal"
+//     }
+//     })
+//     .then((response)=>{
+//       console.log(response.data[3].image)
+//     })
+//     .catch((error)=>{
+//       console.log(error)
+//     })
 //------------------------------------------------------------------------------------
 var mainUsserID=2;
 var ingredientID=[];
 var ingredientName=[];
-var itemId={
-  id:0,
-  usserid:mainUsserID
-};
+
 function activateUsser() {
 
   $.get(`/usserpage/${mainUsserID}`,function (data) {
@@ -47,7 +42,7 @@ function activateUsser() {
           $.get(`/inventary2/${ingredientID[index]}`,function (data) {
               ingredientName.push(data)
               // $(".inventary").text(ingredientName);
-              $("#myDropdown").append(`<button id="inv${ingredientName[index]}" class="ingredient">${ingredientName[index]}<i class="material-icons">delete</i></button>`)
+              $("#myDropdown").append(`<button id="inv${ingredientName[index]}"  onclick="apiCall()" class="ingredient">${ingredientName[index]}<i class="material-icons">delete</i></button>`)
           })
           
       };
@@ -58,9 +53,11 @@ function activateUsser() {
 activateUsser();
 
 
-function itemSelected() {
-  //var itemName=$(this).attr("id")
-  var itemName="pasta";
+$(".food").on("click", function () {
+  
+
+  var itemName=$(this).attr("id")
+ 
   $.get(`/item/${itemName}`,function (data) {
     var itemId={
       id:data,
@@ -73,7 +70,8 @@ function itemSelected() {
       location.reload();
   })
   })
-}
+})
+
 //___________________________________________________________________________________
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
