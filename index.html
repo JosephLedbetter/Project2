@@ -14,13 +14,14 @@
 
 
   <!-- CSS  -->
-  <link rel="stylesheet" href="public/styles/reset.css">
+  <link href="public/styles/reset.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="public/styles/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fredericka+the+Great|Pacifico|Permanent+Marker&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fredericka+the+Great|Pacifico|Permanent+Marker&display=swap"
+    rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="public/" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="public/styles/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="public/styles/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="./public/styles/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
 
 </head>
@@ -28,17 +29,17 @@
 <body>
   <nav class="indigo lighten-4" role="navigation">
     <div class="nav-wrapper container">
-      <!-- <a id="logo-container" href="index.html" class="brand-logo"><img
-          src="#">LOGO</a> -->
-      <ul class="right">
-        <li><a href="./public/html/signup.html">Sign Up</a></li>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="./index.html">Home</a></li>
         <li><a href="./public/html/log.html">Login</a></li>
+        <li><a href="./public/html/signup.html">Sign Up</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-                <li><a href="/index.html">Menu</a></li>
-                <li><a href="./public/html/siup.html">Sign Up</a></li>
-                <li><a href="./public/html/log.html">Login</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./public/html/log.html">Login</a></li>
+        <li><a href="https://form.jotform.com/200238169719156">Sign Up</a></li>
+
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -47,8 +48,17 @@
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
-        <!-- <h1 class="header center red-text text-darken-4">Foodify</h1> -->
+        <div class="row">
+          <div class="col m4">
+          </div>
+          <div class="col m4">
+            <a id="logo-container" class="brand-logo logo-center"><img class="responsive-img"
+                src="./public/photos/Logo.png" class="center"></a>
+          </div>
+          <div class="col m4">
+          </div>
+        </div>
+
         <div class="row center">
           <h5 class="header col s12 light"></h5>
         </div>
@@ -56,7 +66,8 @@
 
       </div>
     </div>
-    <div class="parallax"><img src="public/photos/landing.png" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="public/photos/med-food-hero_1.jpg" alt="Unsplashed background img 1">
+    </div>
   </div>
 
 
@@ -64,7 +75,7 @@
     <div class="section">
 
       <div class="row quote">
-        <p class="blue-text text-darken-2">" You don't have to cook fancy or complicated masterpieces - just good food
+        <p class="orange-text text-darken-4">" You don't have to cook fancy or complicated masterpieces - just good food
           from fresh ingredients."</p>
         <h3 class="Julia"><a href="https://www.womenshistory.org/education-resources/biographies/julia-child"
             target="_blank"> by Julia Child.</a></h3>

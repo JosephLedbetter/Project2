@@ -7,21 +7,17 @@
  */
 
 .background-image{
-  background-image: url(../photos);;
+  margin-top: 5%;
 
-} 
+}
 .header{
   font-family: 'Times New Roman', Times, serif;
   font-size: 32px;
 }
-.singup {
-  margin-top: 250px;
 
-}
 .juliaChild{
   background-image: url(../photos) ;
   background-repeat: repeat;
-  box-shadow: darkred;
 }
 .quote {
   margin-top: 50px;
@@ -38,14 +34,12 @@
 height: 600px;
 }
 
-nav {
-  background-image: url(../photos);
-  background-repeat: no-repeat;
-}
+
 
 nav ul a,
 nav .brand-logo {
-  color: #444;
+  color: black;
+  font-family: 'Permanent Marker', cursive;
 }
 
 p {
@@ -60,24 +54,31 @@ p {
 }
 
 .sidenav-trigger {
-  color: #827717;
+  color: #ad0202;
 }
 .sidenav{
-  background-color: #e4d1b5;
+  background-color: rgb(255, 255, 255);
 }
 
 .parallax-container {
   min-height: 380px;
   line-height: 0;
   height: auto;
-  color: rgba(215, 246, 76, 0.9);
+  color: rgba(250, 134, 2, 0.9);
 }
   .parallax-container .section {
     width: 100%;
-  }
-/* Sing up  */
-.btn-align{
-  margin-left: 500px ;
+}
+/* LOGIN */
+/* .card-panel{
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  width: 70%;
+} */
+.logo-page-background{
+  background-image: url(../photos/food.jpg);
 }
 
 
@@ -138,11 +139,10 @@ p {
   .font-color{
     color: white;
   }
-
-
-  /* .page-footer{
-    margin-top: 300px;
-  } */
+.formFooter,
+.formFooter-content{
+  display: none;
+}
 
 
   
