@@ -397,7 +397,6 @@ p{
     width: 100%;
     background: white;
     object-fit: stretch;
-    z-index: 3;
 }
 
 img{
