@@ -81,7 +81,7 @@ p {
 
 /* sign up */
 .signUp-background{
-  background-image: url(../photos/pimenton.jpg);
+  background-image: url(../photos/veggiesIngridients.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: wheat;
@@ -124,7 +124,6 @@ p {
     height: 20%;
   }
 
-  /* Sticky Footer */
   body {
     display: flex;
     min-height: 100vh;
@@ -139,13 +138,15 @@ p {
     line-height: 2.5;
   }
   
-  .red-text{
-    font-size: 100px;
+  .red-text,
+  .black-text{
+    font-size: 30px;
     font-family: 'Fredericka the Great', cursive;
   }
   .form{
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     color: white;
+    opacity: 0.4;
   }
   .font-color{
     color: white;
