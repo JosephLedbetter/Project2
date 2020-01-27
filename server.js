@@ -59,8 +59,4 @@ app.use(routes);
     console.log(`Server listening on: http://localhost:${PORT}`);
   });
 
-<<<<<<< HEAD
-module.exports = app;
-=======
->>>>>>> f5b8b798d46c38d5469ed6e22a70efffeaefee70
 
