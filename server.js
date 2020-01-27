@@ -41,7 +41,7 @@
 const express = require("express");
 const mysql = require("mysql");
 const path= require("path");
-
+const dotenv=require("dotenv").config();
 
 const app = express();
 const PORT = 8080;
