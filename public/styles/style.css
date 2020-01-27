@@ -81,9 +81,10 @@ p {
 
 /* sign up */
 .signUp-background{
-  background-image: url(../photos/pastryIngridients.jpeg);
+  background-image: url(../photos/bread_meat_vegetables_fish_food.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
+  height: 100%;
   background-color: wheat;
 
 }
