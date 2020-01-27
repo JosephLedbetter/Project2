@@ -1,5 +1,57 @@
+// function createButtons(foodDiv,name) {
+//   var newButton=$(`<button>${name}</button>`);
+//   $(newButton).attr('id',name);
+//   //$(newButton).attr('onclick',"sendToInvetary()");
+//   $(newButton).attr('class',"food")
+//   $(`.${foodDiv}`).append(newButton)
+// }
 
+// createButtons("proteinDropdown","beef");
+//     createButtons("proteinDropdown","chicken");
+//     createButtons("proteinDropdown","pork");
+//     createButtons("proteinDropdown","fish");
+//     -------------------------------
+//     createButtons("vegetable","brocoli");
+//     createButtons("vegetable","green beans");
+//     createButtons("vegetable","tomato");
+//     createButtons("vegetable","lettuce");
+//     //------------------------------
+//     createButtons("carbohydrate","bread");
+//     createButtons("carbohydrate","rice");
+//     createButtons("carbohydrate","outmeal");
+//     createButtons("carbohydrate","pasta");
+//     //------------------------------
+//     createButtons("dairy","milk");
+//     createButtons("dairy","cheese");
+//     createButtons("dairy","sour cream");
+//     createButtons("dairy","cream");
+//------------------------------------------------------------------------------------
+var ingredientID=[];
+var ingredientName=[];
+function activateUsser() {
 
+  // $.get(`/usserpage/${mainUsserID}`,function (data) {
+  //     $("#ussername").text(data);
+     
+  // });
+  $.get(`/inventory/2`,function (data) {
+      ingredientID=data;
+     
+      console.log(data)
+         for (let index = 0; index < ingredientID.length; index++) {
+          $.get(`/inventary2/${ingredientID[index]}`,function (data) {
+              ingredientName.push(data)
+              // $(".inventary").text(ingredientName);
+              $("#myDropdown").append(`<button id="inv${ingredientName[index]}" class="ingredient">${ingredientName[index]}<i class="material-icons">delete</i></button>`)
+          })
+          
+      };
+  });
+
+  
+}
+activateUsser();
+//___________________________________________________________________________________
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
