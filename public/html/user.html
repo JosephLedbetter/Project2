@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../styles/userstyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
 </head>
@@ -75,17 +77,35 @@
                 </div>
             </div>
             <form class="new-item">
-                <div class="new-category form-group">
-                    <label for="exampleInputCategory">Category</label>
-                    <input type="text" class="form-control" id="new-category" aria-describedby="categoryHelp">
-                </div>
+                <select id="choice">
+                    <option selected value="base">SELECT CATEGORY</option>
+                    <option value="protein">PROTEIN</option>
+                    <option value="vegetable">VEGETABLE</option>
+                    <option value="carbohydrate">CARBOHYDRATE</option>
+                    <option value="dairy">DAIRY</option>
+                  </select>
+                <!-- <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Category
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Protein</a>
+                      <a class="dropdown-item" href="#">Vegetable</a>
+                      <a class="dropdown-item" href="#">Carbohydrate</a>
+                      <a class="dropdown-item" href="#">Dairy</a>
+                    </div>
+                  </div> -->
+                  <br>
+                  <br>
                 <div class="new-ingredient form-group">
-                    <label for="exampleInputItem">Food Item</label>
+                    <label for="exampleInputItem">FOOD ITEM</label>
                     <input type="text" class="form-control" id="new-food-item">
                 </div>
                 <br>
-                <a href=""><button class="logout">log out</button></a>
-                <a href=""><button class="submit">Submit New Item</button></a>
+                <a href=""></a><button class="logout">Log Out</button></a>
+                <br>
+                <br>
+                <button class="submit">Submit New Item</button>
             </form>
         </div>
 
@@ -121,10 +141,10 @@
                         </div>
 
     <!-- ICONS FOR ADDING TO FAVORITES -->
-                        <div class=" preference">
+                        <!-- <div class=" preference">
                             <i id="add-favorite" class="material-icons">add</i>
                             <i id="delete-favorite" class="material-icons">clear</i>
-                        </div>
+                        </div> -->
                     </div>
 
                     
@@ -154,8 +174,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/user.js"></script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 
