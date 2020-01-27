@@ -26,15 +26,16 @@
 //     createButtons("dairy","sour cream");
 //     createButtons("dairy","cream");
 //------------------------------------------------------------------------------------
+var mainUsserID=2;
 var ingredientID=[];
 var ingredientName=[];
 function activateUsser() {
 
-  // $.get(`/usserpage/${mainUsserID}`,function (data) {
-  //     $("#ussername").text(data);
+  $.get(`/usserpage/${mainUsserID}`,function (data) {
+      $("#myname").text(data);
      
-  // });
-  $.get(`/inventory/2`,function (data) {
+  });
+  $.get(`/inventory/${mainUsserID}`,function (data) {
       ingredientID=data;
      
       console.log(data)
