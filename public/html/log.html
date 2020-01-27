@@ -15,14 +15,16 @@
     <!-- CSS  -->
     <link href="../styles/reset.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fredericka+the+Great|Pacifico|Permanent+Marker&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fredericka+the+Great|Pacifico|Permanent+Marker&display=swap"
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css" rel="stylesheet">
     <link href="../styles/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="../styles/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
-<body >
+<body class="logo-page-background">
     <nav class="indigo lighten-4" role="navigation">
         <div class="nav-wrapper container">
             <ul class="right hide-on-med-and-down">
@@ -41,53 +43,71 @@
         </div>
     </nav>
 
+
+
+
+
     <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
             <div class="container">
-                <div class="row center">
-                    <h5 class="header col s12 light">"A new way to know your kitchen"
-                    </h5>
+                <div class="row">
+                    <div class="col m4">
+                    </div>
+                    <div class="col m4">
+                        <a id="logo-container" class="brand-logo logo-center"><img class="responsive-img"
+                                src="../photos/Logo.png" class="center"></a>
+                    </div>
+                    <div class="col m4">
+                    </div>
                 </div>
+
+                <div class="row center">
+                    <h5 class="header yellow-text col s12 light">Loging and Cook with Us</h5>
+                </div>
+                <br><br>
 
             </div>
         </div>
-        <div class="parallax"><img src="../photos/Veggie-Prep-Animated-2-Optimized-Optimized.gif"
-                alt="Unsplashed background img 1"></div>
     </div>
 
 
 
 
+    <div class="container ">
+        <div class="section">
+            <div id="user-login" class="row">
+                <div class="col s12 z-depth-6 card-panel">
+                    <form class="login-form">
+                        <div class="row margin">
+                            <div class="input-field col s12">
+                                <i class="mdi-social-person-outline prefix"></i>
+                                <input class="validate" id="user_email" type="email">
+                                <label for="email" data-error="wrong" data-success="right"
+                                    class="center-align">Email</label>
+                            </div>
+                        </div>
+                        <div class="row margin">
+                            <div class="input-field col s12">
+                                <i class="mdi-action-lock-outline prefix"></i>
+                                <input id="user_pass" type="password">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
 
-    <div id="user-login" class="row">
-        <div class="col s12 z-depth-6 card-panel">
-            <form class="login-form">
-                <div class="row margin">
-                    <div class="input-field col s12">
-                        <i class="mdi-social-person-outline prefix"></i>
-                        <input class="validate" id="user_email" type="email">
-                        <label for="email" data-error="wrong" data-success="right" class="center-align">Email</label>
-                    </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <a href="./user.html" class="btn waves-effect waves-light black col s12">Login</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6 m6 l6">
+                                <p class="margin medium-small"><a href="./signup.html">Sign Up Now!</a></p>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="row margin">
-                    <div class="input-field col s12">
-                        <i class="mdi-action-lock-outline prefix"></i>
-                        <input id="user_pass" type="password">
-                        <label for="password">Password</label>
-                    </div>
-                </div>
+            </div>
 
-                <div class="row">
-                    <div class="input-field col s12">
-                        <a href="./user.html" class="btn waves-effect waves-light black col s12">Login</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s6 m6 l6">
-                        <p class="margin medium-small"><a href="./signup.html">Register Now!</a></p>
-                    </div>
-                </div>
-            </form>
         </div>
     </div>
 

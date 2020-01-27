@@ -70,15 +70,12 @@ p {
     width: 100%;
 }
 /* LOGIN */
-/* .card-panel{
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-bottom: 20px;
-  width: 70%;
-} */
+
+
 .logo-page-background{
   background-image: url(../photos/food.jpg);
+  background-repeat: no-repeat ;
+  background-size: 100%;
 }
 
 
@@ -139,10 +136,7 @@ p {
   .font-color{
     color: white;
   }
-.formFooter,
-.formFooter-content{
-  display: none;
-}
+
 
 
   
