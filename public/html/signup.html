@@ -24,7 +24,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="../styles/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="../styles/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
 
@@ -87,13 +87,13 @@
                                     <label for="user_name" class="center-align">Username</label>
                                 </div>
                             </div>
-                            <div class="row margin">
+                            <!-- <div class="row margin">
                                 <div class="input-field col s12">
                                     <i class="mdi-communication-email prefix"></i>
                                     <input id="user_email" type="email" class="validate">
                                     <label for="user_email" class="center-align">Email</label>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="row margin">
                                 <div class="input-field col s12">
                                     <i class="mdi-action-lock-outline prefix"></i>
@@ -101,16 +101,16 @@
                                     <label for="user_passw">Password</label>
                                 </div>
                             </div>
-                            <div class="row margin">
+                            <!-- <div class="row margin">
                                 <div class="input-field col s12">
                                     <i class="mdi-action-lock-outline prefix"></i>
                                     <input id="confirm_pass" type="password">
                                     <label for="confirm_pass">Re-type password</label>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <a href="./log.html" class="btn waves-effect waves-light black col s12">Sign Up</a>
+                                    <button onclick="creatingUsser()"  class="btn waves-effect waves-light black col s12">Sign Up</button>
                                 </div>
                                 <div class="input-field col s12">
                                     <p class="margin center medium-small sign-up">Already have an account? <a
@@ -162,6 +162,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
     <script src="../js/materialize.js"></script>
     <script src="../js/init.js"></script>
+    <script src="../js/signup.js"></script>
 </body>
 
 </html>
