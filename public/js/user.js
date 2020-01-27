@@ -29,6 +29,10 @@
 var mainUsserID=2;
 var ingredientID=[];
 var ingredientName=[];
+var itemId={
+  id:0,
+  usserid:mainUsserID
+};
 function activateUsser() {
 
   $.get(`/usserpage/${mainUsserID}`,function (data) {
@@ -52,6 +56,24 @@ function activateUsser() {
   
 }
 activateUsser();
+
+
+function itemSelected() {
+  //var itemName=$(this).attr("id")
+  var itemName="pasta";
+  $.get(`/item/${itemName}`,function (data) {
+    var itemId={
+      id:data,
+      usserid:mainUsserID
+    };
+    
+    console.log(itemId.id)
+    $.post(`/additem`,itemId).done(function (data) {
+      console.log("added new items to usser")
+      location.reload();
+  })
+  })
+}
 //___________________________________________________________________________________
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
