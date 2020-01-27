@@ -59,5 +59,5 @@ app.use(routes);
     console.log(`Server listening on: http://localhost:${PORT}`);
   });
 
-module.exports = app;
+//module.exports = app;
 
