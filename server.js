@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 //----------------------------------------orm
-const routes = require("./routes/apiRoutes");
+const routes = require("./routes/apiRoutes.js");
 //require('./routes/html-routes')(app);
 app.use(routes);
 
