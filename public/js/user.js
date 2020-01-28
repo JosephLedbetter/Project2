@@ -1,28 +1,10 @@
 
-// const axios = require("axios");
-// const keys=require("../../keys");
 
 
-// axios({
-//     "method":"GET",
-//     "url":"https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients",
-//     "headers":{
-//     "content-type":"application/octet-stream",
-//     "x-rapidapi-host":keys.host,
-//     "x-rapidapi-key":keys.key
-//     },"params":{
-//     "number":"4",
-//     "ranking":"1",
-//     "ignorePantry":"false",
-//     "ingredients":"oatmeal"
-//     }
-//     })
-//     .then((response)=>{
-//       console.log(response.data[3].image)
-//     })
-//     .catch((error)=>{
-//       console.log(error)
-//     })
+
+//var axios=require("../../server.js")
+
+
 //------------------------------------------------------------------------------------
 var mainUsserID=2;
 var ingredientID=[];
@@ -42,7 +24,7 @@ function activateUsser() {
           $.get(`/inventary2/${ingredientID[index]}`,function (data) {
               ingredientName.push(data)
               // $(".inventary").text(ingredientName);
-              $("#myDropdown").append(`<button id="inv${ingredientName[index]}"  onclick="apiCall()" class="ingredient">${ingredientName[index]}<i class="material-icons">delete</i></button>`)
+              $("#myDropdown").append(`<button id="${ingredientName[index]}"   class="ingredient">${ingredientName[index]}<i class="material-icons">delete</i></button>`)
           })
           
       };

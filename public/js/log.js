@@ -10,7 +10,7 @@ $("#findUsser").on("click", function (event) {
           // $(".elid").text(data);
             console.log(data)
             //  console.log(usserlog)
-             // location.assign("/");
+              location.assign("/html/user.html");
         })
        
 })

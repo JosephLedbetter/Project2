@@ -54,7 +54,7 @@
                     <button onclick="catFunctionVeggie()" class="drop-click">Vegetable</button>
                     <div id="veggiesDropdown" class="category-dropdown">
                         <button  id="broccoli" class="food">Broccoli</button>
-                        <button  id="gbean" class="food">Green Beans</button>
+                        <button  id="bean" class="food">Green Beans</button>
                         <button  id="lettuce" class="food">Lettuce</button>
                         <button  id="tomato" class="food">Tomato</button>
                     </div>
@@ -130,14 +130,45 @@
             <div class="return-container">
                 <div class="return-object">
 
- <!-- RECIPE RETURNED SHOULD BE ENTERED HERE -->
-                    <div class=" object">
+
+                    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                    <input id="search" ><button onclick="getrecepe(document.getElementById('search').value)">Search</button>
+                    <div id="output"></div>
+                    <a href="" id="sourceLink"></a>
+                    <script>
+                    
+                    function getsource(id){
+                    $.ajax({
+                    url:"https://api.spoonacular.com/recipes/"+id+"/information?apiKey=db254b5cd61744d39a2deebd9c361444",
+                    success: function(res) {
+                    
+                    document.getElementById("sourceLink").innerHTML=res.sourceUrl
+                    document.getElementById("sourceLink").href=res.sourceUrl
+                    }
+                    });
+                    }
+                    function getrecepe(q){
+                    $.ajax({
+                    url:"https://api.spoonacular.com/recipes/search?apiKey=db254b5cd61744d39a2deebd9c361444&number=1&query="+q,
+                    success: function(res) {
+                    
+                    document.getElementById("output").innerHTML="<h1>"+res.results[0].title+"</h1><br><img src='"+res.baseUri+res.results[0].image+"' width='250' /><br>Ready in "+res.results[0].readyInMinutes+" minutes"
+                    getsource(res.results[0].id)
+                    }
+                    });
+                    }
+                    
+                    </script>
+                    
+
+
+                    <!-- <div class=" object">
                         <p> Recipe returned</p> 
                             <div class="image-holder"><img src="https://spoonacular.com/recipeImages/601227-312x231.jpg">
                              </img></div>
                     </div>
 
-<!-- RECIPE RETURNED SHOULD BE ENTERED HERE -->
+
                     <div class=" object">
                         <p> Recipe returned</p> 
                             <div class="image-holder"><img src="https://spoonacular.com/recipeImages/601227-312x231.jpg">
@@ -145,7 +176,7 @@
                     </div>
 
 
- <!-- RECIPE RETURNED SHOULD BE ENTERED HERE -->
+ 
                     <div class=" object">
                         <p> Recipe returned</p> 
                             <div class="image-holder"><img src="https://spoonacular.com/recipeImages/601227-312x231.jpg">
@@ -153,12 +184,12 @@
                     </div>
 
 
- <!-- RECIPE RETURNED SHOULD BE ENTERED HERE -->
+
                     <div class=" object">
                         <p> Recipe returned</p> 
                             <div class="image-holder"><img src="https://spoonacular.com/recipeImages/601227-312x231.jpg">
                             </img></div>
-                    </div>
+                    </div> -->
 
 
 
